@@ -1,10 +1,10 @@
 const { connect } = require("mongoose"),
-  { PORT, MONGO_URL, MONGO_URL_LOCAL } = require("./keys"),
+  { PORT, MONGO_URL } = require("./keys"),
   { success, error } = require("consola");
 
 const connectDB = async app => {
   try {
-    await connect(MONGO_URL_LOCAL, {
+    await connect(MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
@@ -13,7 +13,7 @@ const connectDB = async app => {
 
     success({ message: `Connected to MongoDB...`, badge: true });
 
-    app.listen(PORT || 5000, () => {
+    app.listen(process.env.PORT || PORT, () => {
       success({ message: `Server started on port ${PORT}`, badge: true });
     });
   } catch (err) {
