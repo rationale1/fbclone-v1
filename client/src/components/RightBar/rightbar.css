@@ -1,0 +1,85 @@
+.widget {
+  flex: 0.3;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+}
+
+/* Birthday Container */
+.birthdayImg {
+  width: 40px;
+  height: 40px;
+}
+
+.birthdayText {
+  font-size: 15px;
+}
+
+.rightBar__ad {
+  border-radius: 7px;
+}
+
+.rightbar__friend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Right Bar Profile */
+.rightbar__title {
+  font-size: 18px;
+  font-size: 600;
+  margin-bottom: 10px;
+}
+
+.rightbar__info-item {
+  margin-bottom: 10px;
+}
+
+.info__value {
+  font-weight: 300;
+}
+
+.info__key {
+  font-weight: 600;
+  color: #555;
+  margin-right: 15px;
+}
+
+.rightbar__followings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.following {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.following img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Follow Button */
+.btn__follow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 20px 0;
+  color: #fff;
+  padding: 5px 7px;
+  background-color: #1872f2;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* utilities */

@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.auth__input {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.auth__btn,
+.auth__btn2 {
+  height: 50px;
+  border-radius: 10px;
+  background-color: #1775ee;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.auth__btn2 {
+  width: 50%;
+  align-self: center;
+  background-color: #42b72a;
+}
+
+.auth__forgot {
+  text-align: center;
+  color: #1775ee;
+}

@@ -1,0 +1,181 @@
+/* header Section */
+.header {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+
+  height: 70px;
+}
+
+.header > * {
+  cursor: pointer;
+}
+
+/*-------- Header Left ----------*/
+.header__left {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.logo:hover {
+  color: var(--fb-color);
+}
+
+.logo span {
+  color: var(--fb-color);
+}
+
+.logo:hover .logo__span {
+  color: #000;
+}
+
+.header__input {
+  position: relative;
+  border-radius: 999px;
+  padding: 0.5rem;
+  background: #eff2f5;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header__input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+  width: 100%;
+  font-weight: 600;
+}
+
+/*--------------- Header Middle ---------------*/
+.header__middle {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 2rem !important;
+  color: #1877f2 !important;
+}
+.navbar__badge {
+  background-color: red;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+
+  font-size: 10px;
+  top: -3px;
+  right: -3px;
+
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__option {
+  position: relative;
+}
+
+.header__option.active {
+  border-bottom: 2px solid #2e81f4;
+}
+
+.header__option:hover {
+  background: #eff2f5;
+  border-radius: 10px;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/*--------------- Header Right ---------------*/
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user__avatar {
+  border-radius: 50%;
+  width: 45px;
+}
+
+.header__title {
+  font-size: 1.2rem;
+  color: green;
+  color: var(--fb-color);
+}
+
+/* SignOut */
+.red {
+  color: red !important;
+  font-size: 1rem !important;
+}
+
+.signout {
+  gap: 0.3rem;
+}
+
+.signout span {
+  font-size: 1rem;
+}
+
+.sign__up {
+  font-size: 1.2rem;
+}
+
+.sign__up:hover {
+  color: var(--fb-color);
+}
+
+/* @media screen and (max-width: 768px) {
+  .header__input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__avatar {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .logo,
+  .header__title {
+    font-size: 0.5rem;
+  }
+
+  .header__input {
+    display: none;
+  }
+} */
