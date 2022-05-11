@@ -30,6 +30,15 @@ app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/users", require("./routes/users"));
 app.use("/api/posts", require("./routes/postRoutes"));
 
+/** .......Serve Static assets if in Production.... */
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 /** ....404 Error and Forward to Error Handler...... */
 app.use((req, res, next) => {
   next(createError.NotFound());
@@ -42,15 +51,6 @@ app.use((err, req, res, next) => {
     status: err.status || 500,
   });
 });
-
-/** .......Serve Static assets if in Production.... */
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
 
 /* ................Start Server............ */
 // app.listen(process.env.PORT || 5000, () => console.log("Server Started"));
