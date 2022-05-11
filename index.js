@@ -43,6 +43,7 @@ app.use((err, req, res, next) => {
   });
 });
 
+/** .......Serve Static assets if in Production.... */
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
